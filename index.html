@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/fav.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Página Inicial</title>
 </head>
@@ -11,7 +12,8 @@
     <section class="header">
         <nav>
             <a href="index.html"><img src="images/logo.webp" alt="logo"></a>
-            <div class="nav-link">
+            <div class="nav-link" id="navLinks"> 
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">Biografia</a></li>
@@ -27,6 +29,7 @@
                     <li><a href="https://store.toolband.com/store">Loja Oficial</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu"></i>
         </nav>
        
     </section>
@@ -35,5 +38,6 @@
         <p>Tool é uma banda de rock americana de Los Angeles, Califórnia. Formada em 1990, o grupo é atualmente composto pelo vocalista Maynard James Keenan, o guitarrista Adam Jones,<br>o baterista Danny Carey e o baixista Justin Chancellor.</p>
         <a href="" class="spiral-btn">Conheça Mais</a>
     </div>
+    <script src="javascript/menu.js"></script>
 </body>
 </html>
