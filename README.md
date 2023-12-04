@@ -8,9 +8,7 @@ Este é um projeto desenvolvido como parte da disciplina de Desenvolvimento de A
 
 O projeto utiliza uma variedade de tecnologias modernas para o desenvolvimento web. Algumas das principais incluem:
 
-- Frontend: HTML5, CSS3, JavaScript, React.js
-- Backend: Node.js, Express.js
-- Banco de Dados: MongoDB
+- Frontend: HTML5, CSS3, JavaScript,
 - Controle de Versão: Git, GitHub
 
 ## Instruções de Instalação
@@ -19,5 +17,5 @@ Para configurar o projeto localmente, siga as instruções abaixo:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/seu-projeto.git
-cd 
+git clone https://github.com/jumpedDragon/AV2.git
+cd AV2
