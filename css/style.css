@@ -4,10 +4,21 @@
     color: #f8f8f8;
 }
 
+@font-face {
+    font-family: 'merriweather', Arial, Helvetica, sans-serif;
+    src: url('../fonts/Merriweather/Merriweather-Regular.ttf') format('truetype');
+
+}
+
+body{
+    font-family: 'merriweather';
+    background-color: #0f0f0f;
+}
+
 .header {
     min-width: 100vh;
     width: 100%;
-    background: linear-gradient(to bottom, #330033, #660066),url(../images/back.png);
+    background: linear-gradient(to bottom, #660066, #050105),url(../images/back.png);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -34,4 +45,10 @@ nav {
     display: inline-block;
     padding: 8px 12px;
     position: relative;
+}
+
+.nav-link a{
+    color: #f8f8f8;
+    text-decoration: none;
+    font-size: 14px;
 }
