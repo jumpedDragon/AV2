@@ -283,9 +283,105 @@ cite {
 }
 
 
+/* Disografia */
+
+.discografia {
+    width: 80%;
+    margin:  auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.album {
+    position: relative;
+    width: 70%; /* Adjust as needed */
+    height: 0;
+    padding-top: 20px;
+    padding-bottom: 50%; /* This makes the height responsive to the width */
+    perspective: 1000px;
+    margin: 0 auto 20px; /* Centers the album horizontally and adds space below */
+}
+
+.album-front, .album-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 21px;
+    background: #3a033a;
+    border-radius: 10px;
+    text-align: center;
+    text-shadow: 2px 2px 0 #3a033a;
+    border: solid 2px #fccb6c;
+    padding: 25px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    backface-visibility: hidden;
+    overflow: auto; /* Add this line */
+}
+.album-front::-webkit-scrollbar, .album-back::-webkit-scrollbar {
+    display: none;
+}
 
 
+.album-front img:hover{
+    box-shadow: 0 0 20px 0px rgba(255,255,255,0.5);
+    transform: translateY(-10px);
+    transition: 1s; /* Adjust the speed as needed */
+}
 
+.album-front img{
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.album-front {
+    z-index: 2;
+}
+
+.album-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    text-align: center;
+    background: #3a033a;
+    border-radius: 10px;
+    text-align: center;
+    text-shadow: 2px 2px 0 #3a033a;
+    border: solid 2px #fccb6c;
+    padding: 0; /* Remove padding */
+    box-sizing: border-box;
+    transition: 0.5s;
+    backface-visibility: hidden;
+    overflow: auto;
+    transform: rotateY(180deg);
+}
+
+.album-back ul{
+    list-style: none;
+    padding: 0;
+}
+
+.album.flipped .album-front {
+    transform: rotateY(180deg);
+}
+
+.album.flipped .album-back {
+    transform: rotateY(0);
+}
+
+.gold{
+    color: #fccb6c;
+}
 
 
 /* resoluções */
@@ -331,8 +427,14 @@ cite {
         font-size: 18px;
         padding: 15px;
     }
+
+    .album {
+        width: 60%; /* Adjust as needed */
+        padding-bottom: 60%; /* Adjust as needed */
+    }
 }
     
+
 
 
 
@@ -406,6 +508,11 @@ cite {
     .bio-col img {
         width: 100%;
         height: auto;
+    }
+
+    .album {
+        width: 45%; /* Adjust as needed */
+        padding-bottom: 45%; /* Adjust as needed */
     }
     
 }

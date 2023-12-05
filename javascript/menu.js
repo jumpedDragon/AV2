@@ -8,3 +8,10 @@ function hideMenu() {
 
 // garante que o menu esteja escondido ao carregar a página
 hideMenu();
+
+
+document.querySelectorAll('.album').forEach(album => {
+    album.addEventListener('click', () => {
+        album.classList.toggle('flipped');
+    });
+});
