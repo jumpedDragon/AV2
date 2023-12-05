@@ -5,3 +5,6 @@ function showMenu() {
 function hideMenu() {
     navLinks.style.right = "-200px";
 }
+
+// garante que o menu esteja escondido ao carregar a página
+hideMenu();
