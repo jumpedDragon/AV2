@@ -384,8 +384,171 @@ cite {
 }
 
 
+/* letras */
+.grid-container {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 30px;
+}
+
+.grid-item {
+    flex-basis: 31%;
+    font-size: 21px;
+    width: fit-content;
+    height: 500px;
+    background: #3a033a;
+    border-radius: 10px;
+    text-align: left;
+    text-shadow: 2px 2px 0 #3a033a;
+    border: solid 2px #fccb6c;
+    margin-bottom: 5%;
+    padding: 25px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.letra {
+    flex: 1;
+    overflow: auto;
+    max-height: 400px; /* adjust as needed */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.letra::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* favoritos */
+
+.song {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.song-text {
+    font-size: 2em; /* adjust as needed */
+    transition: all 0.5s ease;
+}
+
+.song-text:hover {
+    color: #fccb6c;
+    transform: scale(1.1) translateY(-10px);
+}
+.song-text:active {
+    animation: spin 0.5s linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* arte */
+
+.art{
+    width: 80%;
+    margin:  auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.art-text {
+    max-height: 500px; /* Adjust this value as needed */
+    overflow-y: auto;
+}
+
+.art-text strong{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fccb6c;
+    margin-bottom: 30px;
+}
+
+.art-text h1{
+    font-size: 25px;
+    padding: 0;
+}
+
+
+.art-row {
+    display: flex;
+    justify-content: justify-conn;
+    gap: 10px; /* adjust as needed */
+}
+
+.art-col {
+    flex-basis: 31%;
+    font-size: 21px;
+    background: #3a033a;
+    border-radius: 10px;
+    text-align: left;
+    text-shadow: 2px 2px 0 #3a033a;
+    border: solid 2px #fccb6c;
+    margin-bottom: 5%;
+    padding: 25px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.art-col img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.art-col:hover{
+    box-shadow: 0 0 20px 0px rgba(255,255,255,0.5);
+    transform: translateY(-10px);
+}
+
+
+/* colaborações */
+
+.caixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkpurple; /* replace with your preferred color */
+    border: 2px solid gold;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    display: block;
+}
+
+.caixa h2 {
+    font-size: 0.9em; /* adjust as needed */
+    text-align: center;
+}
+
+.caixa h2:hover {
+    color: gold;
+    transition: 1s;
+}
+
+.caixa-texto {
+    text-align: center;
+    margin-top: 25px;
+}
+
+
 /* resoluções */
+
+
 @media screen and (max-width: 700px){
+
+    art-col img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        flex-direction: column;
+    }
     .text-box h1{
         font-size: 20px;
     }
@@ -431,6 +594,24 @@ cite {
     .album {
         width: 60%; /* Adjust as needed */
         padding-bottom: 60%; /* Adjust as needed */
+        flex-direction: column;
+    }
+
+    .grid-container {
+        flex-direction: column;
+    }
+
+    .art-col {
+        flex-basis: 31%;
+        font-size: 21px;
+        flex-direction: column;
+    }
+
+    .art-col img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        flex-direction: column;
     }
 }
     
@@ -439,6 +620,11 @@ cite {
 
 
 @media screen and (max-width: 811px){
+
+    .sub-header h1{
+        margin-top: 50px;
+        flex-direction: column;
+    }
     .text-box h1{
         font-size: 20px;
     }
@@ -496,10 +682,11 @@ cite {
     }
 
     .bio-text h1 {
-        font-size: 20px;
-    }
-
-    .bio-col {
+        font-size: 20px;.art-col img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         flex-basis: 100%;
         font-size: 18px;
         padding: 15px;
@@ -514,5 +701,27 @@ cite {
         width: 45%; /* Adjust as needed */
         padding-bottom: 45%; /* Adjust as needed */
     }
+
+    .grid-container {
+        flex-direction: column;
+    }
+
+    .art-col {
+        flex-basis: 31%;
+        font-size: 21px;
+        flex-direction: column;
+    }
+
+    art-col img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        flex-direction: column;
+    }
     
+}
+
+.empty-div{
+    height: 310px;
+    width: 100%;
 }
