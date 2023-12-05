@@ -218,6 +218,70 @@ cite {
 }
 
 
+/* biografia */
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(2, 15, 65, 0.7),rgba(1, 5, 24, 0.7)),url('../images/tool-band-banner.webp');
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #f8f8f8;
+}
+
+.sub-header h1{
+    margin-top: 100px;
+}
+
+.sub-header p{
+    font-size: 20px;
+    margin-top: 100px;
+}
+
+.bio{
+    width: 80%;
+    margin:  auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.bio-text {
+    max-height: 500px; /* Adjust this value as needed */
+    overflow-y: auto;
+}
+
+.bio-text strong{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fccb6c;
+    margin-bottom: 30px;
+}
+
+.bio-text h1{
+    font-size: 25px;
+    padding: 0;
+}
+
+
+.bio-col{
+    flex-basis: 31%;
+    font-size: 21px;
+    background: #3a033a;
+    border-radius: 10px;
+    text-align: left;
+    text-shadow: 2px 2px 0 #3a033a;
+    border: solid 2px #fccb6c;
+    margin-bottom: 5%;
+    padding: 25px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.bio-col:hover{
+    box-shadow: 0 0 20px 0px rgba(255,255,255,0.5);
+    transform: translateY(-10px);
+}
+
 
 
 
@@ -238,10 +302,38 @@ cite {
         margin-right: 15px;
         margin-left: 0px;
     }
+    .bio {
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 25px;
+    }
+
+    .bio-text {
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .bio-col img {
+        width: 100%;
+        height: auto;
+    }
+
+    .bio-text strong {
+        font-size: 16px;
+    }
+
+    .bio-text h1 {
+        font-size: 20px;
+    }
+
+    .bio-col {
+        flex-basis: 100%;
+        font-size: 18px;
+        padding: 15px;
+    }
+}
     
 
-
-}
 
 
 @media screen and (max-width: 811px){
@@ -284,6 +376,36 @@ cite {
     .image-cite-container img, .image-cite-container blockquote {
         margin-right: 35px;
         margin-left: 0px;
+    }
+
+    .bio {
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 25px;
+    }
+
+    .bio-text {
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .bio-text strong {
+        font-size: 16px;
+    }
+
+    .bio-text h1 {
+        font-size: 20px;
+    }
+
+    .bio-col {
+        flex-basis: 100%;
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .bio-col img {
+        width: 100%;
+        height: auto;
     }
     
 }
